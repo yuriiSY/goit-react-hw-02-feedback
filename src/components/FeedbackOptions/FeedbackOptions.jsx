@@ -1,5 +1,3 @@
-import styles from './feedback-options.css';
-
 const FeedbackOptions = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <div>
