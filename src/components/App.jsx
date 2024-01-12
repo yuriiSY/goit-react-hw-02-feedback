@@ -43,7 +43,7 @@ export default class App extends Component {
         ) : (
           <Section title={'Statistics'}>
             {
-              <FeedbackOptions
+              <Statistics
                 good={good}
                 neutral={neutral}
                 bad={bad}
@@ -55,7 +55,7 @@ export default class App extends Component {
         )}
         <Section title={'Please leave feedback'}>
           {
-            <Statistics
+            <FeedbackOptions
               options={['good', 'neutral', 'bad']}
               onLeaveFeedback={this.addVote}
             />

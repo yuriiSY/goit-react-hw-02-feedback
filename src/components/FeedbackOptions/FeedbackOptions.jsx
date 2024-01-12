@@ -1,13 +1,11 @@
-const FeedbackOptions = ({ good, neutral, bad, total, positivePercentage }) => {
-  return (
-    <div>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total:{total}</p>
-      <p>Percentage:{positivePercentage}%</p>
-    </div>
-  );
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  const buttons = options.map(option => (
+    <button key={option} onClick={() => onLeaveFeedback(option)}>
+      {option}
+    </button>
+  ));
+
+  return <div>{buttons}</div>;
 };
 
 export default FeedbackOptions;
